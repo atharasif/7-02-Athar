@@ -14,13 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 route::get('/',function() {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 
 route::get('/about',function() {
-    return view(('about'));
+    return view('about', [
+        "title" => "About",
+        "nama" => "Athar Asif Nurcahyadi",
+        "email" => "3103120038@student.smktelkom-pwt.sch.id",
+        "gambar" => "athar.jpg"
+    ]);
 });
 
 route::get('/gallery',function() {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
