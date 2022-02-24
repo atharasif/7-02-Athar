@@ -10,18 +10,23 @@
                 <a class="nav-link {{ ($title === 'Home') ? 'active' : ' ' }}" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link {{ ($title === 'About') ? 'active' : ' ' }}" href="/">About</a>
+                <a class="nav-link {{ ($title === 'About') ? 'active' : ' ' }}" href="/about">About</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link {{ ($title === 'Gallery') ? 'active' : ' ' }}" href="/">Gallery</a>
+                <a class="nav-link {{ ($title === 'Gallery') ? 'active' : ' ' }}" href="/gallery">Gallery</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ ( $title === 'Contacts') ? 'active' : ' '}}" href="/contacts">Contact Us</a>
+                <a class="nav-link {{ ( $title === 'Contacts') ? 'active' : ' '}}" href="/contacts">Contact Us</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route ('login')}}">Login</a>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="{{route ('register')}}">Register</a>
                 </li>
             </ul>
             </div>
         </div>
-    </nav>
+</nav>

@@ -15,8 +15,8 @@ use App\Http\Controllers\ContactController;
 */
 
 route::get('/',function() {
-    return view('home', [
-        "title" => "Home"
+    return view('index', [
+        "title" => "Beranda"
     ]);
 });
 
@@ -36,3 +36,10 @@ route::get('/gallery',function() {
 });
 
 route::resource('/contacts', ContactController::class);
+Auth::routes();
+
+route::group(['middleware' => ['auth']], function (){
+    route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
